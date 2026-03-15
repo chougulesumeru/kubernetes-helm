@@ -1,0 +1,20 @@
+Helm Workflow 
+
+1 : add repo   > helm add repo 
+2:  search/update > helm search repo <keyword> or helm repo update
+3:  install > helm install <release-name> <chart-name> --values custom-value.yml
+4:  upgrade: > helm upgrae <release-name> <chart-name> --set key=value
+5:  list/uninstall  > helm list or helm uninstall <release-name>
+6:  inspect  > helm get manifest <release-name>
+
+
+$ Deploying simple nginx web server with helm
+
+step 1: set up helm 
+
+helm repo bitnami https://charts.bitnami.com/bitnami
+helm repo add 
+
+#search for chart
+helm search repo bitnami/nginx
+
