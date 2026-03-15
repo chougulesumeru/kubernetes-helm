@@ -1,0 +1,8 @@
+# list releases
+kubectl list 
+
+#get pod status 
+kubectl get pods
+
+#port-forward to test 
+kubectl port-forward svc/my-nginx 8080:80

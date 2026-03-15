@@ -1,0 +1,24 @@
+# step 2: create custom values file to customize deployment
+
+
+replicaCount: 2  
+image:
+   repository: bitnami/nginx
+   tag: "1.25.3"
+
+service:
+   type: LoadBalancer
+   ports:
+     http: 80
+    
+ingress:
+   enbaled: true
+   hostname: nginx.example.com
+
+resources:
+  limits:
+     cpu: 500m
+     memory: 512Mi
+
+
+# install helm > helm install my-nginx bitnami/nginx -f my-values.yml  --namespace default 
